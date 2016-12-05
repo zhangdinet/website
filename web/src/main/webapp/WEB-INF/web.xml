@@ -3,11 +3,11 @@
         "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-    <!--<display-name>Archetype Created Web Application</display-name>
+    <display-name>Archetype Created Web Application</display-name>
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:dispatcher-servlet.xml</param-value>
+        <param-value>classpath:applicationContext.xml</param-value>
     </context-param>
 
     <listener>
@@ -20,7 +20,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                classpath:spring-mybatis.xml
+                classpath:dispatcher-servlet.xml
             </param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
@@ -28,5 +28,5 @@
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping>-->
+    </servlet-mapping>
 </web-app>

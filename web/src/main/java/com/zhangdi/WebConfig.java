@@ -1,11 +1,8 @@
 package com.zhangdi;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.DefaultServletHandlerConfigurer;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfig;
 import org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer;
@@ -14,9 +11,9 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 /**
  * Created by hzzhandi3 on 2016/12/5.
  */
-@Configuration
+/*@Configuration
 @EnableWebMvc
-@ComponentScan("com.zhangdi")
+@ComponentScan("com.zhangdi.website")*/
 public class WebConfig extends WebMvcConfigurerAdapter {
 
     @Override

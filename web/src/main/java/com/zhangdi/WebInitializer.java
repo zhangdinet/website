@@ -1,13 +1,11 @@
 package com.zhangdi;
 
-import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
-
 /**
  * Created by hzzhandi3 on 2016/12/5.
  */
-public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class WebInitializer { //extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-    @Override
+    /*@Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class<?>[]{
             RootConfig.class
@@ -26,5 +24,5 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
         return new String[]{
             "/"
         };
-    }
+    }*/
 }
