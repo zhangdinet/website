@@ -1,4 +1,4 @@
-package com.zhangdi.website;
+package com.zhangdi.website.service;
 
 /**
  * Created by hzzhandi3 on 2016/12/5.
