@@ -1,4 +1,4 @@
-package com.zhangdi.website.controller;
+package com.zhangdi.website;
 
 import org.testng.annotations.Test;
 

@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
  */
 
 @Test
-@ContextConfiguration(locations = {"classpath:applicationContext.xml"})
+@ContextConfiguration(locations = {"classpath:testContext.xml"})
 public class BaseTest extends AbstractTestNGSpringContextTests {
 
     protected static Logger logger  = LoggerFactory.getLogger(BaseTest.class);
