@@ -17,5 +17,6 @@ public class DemoNamespaceHandlerTest extends BaseTest {
    @Test
    public void test() {
       logger.debug(userEntity.toString());
+      int a=10;
    }
 }
