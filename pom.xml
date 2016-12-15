@@ -10,7 +10,7 @@
         <module>dao</module>
         <module>service</module>
         <module>web</module>
-        <!--<module>test</module>-->
+        <module>test</module>
     </modules>
     <name>website Maven Webapp</name>
     <url>http://maven.apache.org</url>
@@ -157,6 +157,10 @@
                     <exclusion>
                         <groupId>org.slf4j</groupId>
                         <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
