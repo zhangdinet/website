@@ -14,7 +14,6 @@ public class NioTest {
 
         LongBuffer longBuffer = LongBuffer.allocate(30);
         int a=10;
-
     }
 
     public static void read(){
