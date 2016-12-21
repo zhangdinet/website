@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <properties url="file:///C:/zhangdi/project/website/dao/src/main/resources/generatorConfig.properties"/>
+    <!--<properties resource="generatorConfig.properties"/>-->
+    <!--<classPathEntry location="D:/mysql-connector-java-5.1.20-bin.jar"/>-->
+    <context id="context" targetRuntime="MyBatis3">
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+            <property name="suppressDate" value="true"/>
+            <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+            <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+
+        </commentGenerator>
+
+        <jdbcConnection driverClass="${mybatis.generator.driverClass}"
+                        connectionURL="${mybatis.generator.connectionURL}"
+                        userId="${mybatis.generator.userId}"
+                        password="${mybatis.generator.password}"/>
+
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <javaModelGenerator targetPackage="${mybatis.generator.domain.package}" targetProject="${mybatis.generator.target.project}">
+            <property name="enableSubPackages" value="false"/>
+            <property name="trimStrings" value="true"/>
+            <!--<property name="rootClass" value="com.zhangdinet.domain.BaseDO"/>-->
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="${mybatis.generator.xml.mapper.package}" targetProject="${mybatis.generator.target.resources}">
+            <property name="enableSubPackages" value="false"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator targetPackage="${mybatis.generator.mapper.package}" targetProject="${mybatis.generator.target.project}" type="XMLMAPPER">
+            <property name="enableSubPackages" value="false"/>
+        </javaClientGenerator>
+
+        <table tableName="user_demo" domainObjectName="UserDemo"
+               enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+               selectByExampleQueryId="true" enableUpdateByExample="true">
+            <!--<columnOverride column="name">
+                <property name="property" value="userName"/>
+                <property name="javaType" value="java.lang.Integer"/>
+                <property name="jdbcType" value="NUMBER"/>
+                <property name="typeHandler" value=""/>
+            </columnOverride>
+            <ignoreColumn column="deptId" delimitedColumnName=""/>-->
+        </table>
+    </context>
+</generatorConfiguration>
