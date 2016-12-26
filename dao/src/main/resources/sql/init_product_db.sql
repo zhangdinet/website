@@ -1,5 +1,30 @@
 SET FOREIGN_KEY_CHECKS=0;
 
+
+
+DROP TABLE IF EXISTS `brand`;
+CREATE TABLE `brand` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(64) NOT NULL COMMENT '品牌名称',
+  `industry` varchar(64) DEFAULT NULL COMMENT '主营行业',
+  `nation_id` bigint(20) unsigned NOT NULL DEFAULT '0' COMMENT '品牌发源地，0代表无品牌发源地',
+  `brand_description` text COMMENT '品牌描述',
+  `brand_logo` varchar(1024) DEFAULT NULL COMMENT '品牌LOGO',
+  `is_delete` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否已删除，0代表未删除，1代表已删除',
+  `gmt_create` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '创建时间',
+  `gmt_modified` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+  `review` int(11) NOT NULL DEFAULT '0' COMMENT '品牌信息是否已被审核，0代表已审核，1代表未审核',
+  `design_img` varchar(1024) DEFAULT NULL COMMENT '品牌设计图',
+  `story` text COMMENT '品牌故事',
+  `on_sale_sku_count` int(11) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `name_review_index` (`name`,`review`,`is_delete`) USING BTREE,
+  KEY `name_index` (`name`,`is_delete`) USING BTREE,
+  KEY `id_index` (`id`,`is_delete`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1335 DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT COMMENT='品牌表';
+
+
+
 DROP TABLE if EXISTS 'category';
 CREATE TABLE `category` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT COMMENT '主键ID',
