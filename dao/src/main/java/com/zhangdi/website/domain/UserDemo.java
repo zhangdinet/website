@@ -3,7 +3,7 @@ package com.zhangdi.website.domain;
 public class UserDemo {
     private Integer id;
 
-    private String name;
+    private String name = "张弟";
 
     private String phone;
 
