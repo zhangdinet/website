@@ -10,10 +10,10 @@ public class MainTest {
 
     private static Logger logger = LoggerFactory.getLogger(MainTest.class);
 
-    public static void main(String[] args){
-        logger.debug("test,test"+Thread.currentThread().getName());
-        int a=10;
-        a++;
+    public static void main(String[] args) {
+
     }
 
 }
+
+
