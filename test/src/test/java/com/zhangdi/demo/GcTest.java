@@ -11,7 +11,7 @@ public class GcTest {
 
     public static void main(String[] args) {
         Memory.test();
-        //System.gc();
+        System.gc();
         int b = 10;
     }
 

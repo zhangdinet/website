@@ -78,6 +78,10 @@
             <artifactId>logback-ext-spring</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>net.bull.javamelody</groupId>
+            <artifactId>javamelody-core</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
