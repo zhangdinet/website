@@ -15,12 +15,8 @@ public class PatternTest {
 
         Pattern pattern = Pattern.compile("(\\W+)(\\w+)");
         Matcher matcher = pattern.matcher(str);
-
         int a=10;
 
 
-
     }
-
-
 }
