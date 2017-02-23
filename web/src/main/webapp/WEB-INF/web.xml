@@ -34,6 +34,15 @@
     </listener>
 
     <servlet>
+        <servlet-name>demo</servlet-name>
+        <servlet-class>com.zhangdi.website.web.DemoServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo</servlet-name>
+        <url-pattern>/demo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
