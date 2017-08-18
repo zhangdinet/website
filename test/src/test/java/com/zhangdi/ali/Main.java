@@ -2,8 +2,9 @@ package com.zhangdi.ali;
 
 
 import com.beust.jcommander.internal.Lists;
+import com.google.common.collect.Maps;
 import org.apache.commons.collections.MapUtils;
-import org.testng.collections.Maps;
+
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -16,12 +17,17 @@ import java.util.Map;
  */
 public class Main {
 
+    /**
+     * TODO:
+     * 1 未考虑并发情况
+     * 2 退款后删除了子订单，应该通过状态区分
+     * 3 退款校验不完善
+     */
+
     static Order order;
 
     public static void main(String[] args){
-
         order = initOrder();
-
         List<Integer> orderNoList = Arrays.asList(100211,100212,100213,100214);
         for(Integer orderNo:orderNoList){
             List<SubOrder> subOrderList = refund(orderNo);
@@ -29,7 +35,12 @@ public class Main {
         }
     }
 
-    public static Order initOrder(){
+    /**
+     * 初始化订单数据
+     *
+     * @return
+     */
+    private static Order initOrder(){
         Order order = new Order();
         order.setOrderNo(100210);
         order.setTotalMoney(BigDecimal.valueOf(1000));

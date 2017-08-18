@@ -5,6 +5,8 @@ import java.math.BigDecimal;
 import java.util.Map;
 
 /**
+ * 主订单
+ *
  * User: zhangdi
  * Date: 2017-01-14 17:18
  */
@@ -12,18 +14,39 @@ public class Order implements Serializable {
 
     private static final long serialVersionUID = -8861242177516380240L;
 
+    /**
+     * 主订单号
+     */
     private Integer orderNo;
 
+    /**
+     * 主订单总金额
+     */
     private BigDecimal totalMoney;
 
+    /**
+     * 支付金额
+     */
     private BigDecimal cash;
 
+    /**
+     * 红包金额
+     */
     private BigDecimal redEnvelopMoney;
 
+    /**
+     * 积分金额
+     */
     private BigDecimal pointMoney;
 
+    /**
+     * 剩余支付金额
+     */
     private BigDecimal remainCash;
 
+    /**
+     * 子订单列表
+     */
     Map<Integer,SubOrder> subOrderMap;
 
     public Integer getOrderNo() {
@@ -80,5 +103,18 @@ public class Order implements Serializable {
 
     public void setSubOrderMap(Map<Integer, SubOrder> subOrderMap) {
         this.subOrderMap = subOrderMap;
+    }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "orderNo=" + orderNo +
+                ", totalMoney=" + totalMoney +
+                ", cash=" + cash +
+                ", redEnvelopMoney=" + redEnvelopMoney +
+                ", pointMoney=" + pointMoney +
+                ", remainCash=" + remainCash +
+                ", subOrderMap=" + subOrderMap +
+                '}';
     }
 }

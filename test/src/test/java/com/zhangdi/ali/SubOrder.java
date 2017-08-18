@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
+ * 子订单
+ *
  * User: zhangdi
  * Date: 2017-01-14 16:11
  */
@@ -11,20 +13,44 @@ public class SubOrder implements Serializable {
 
     private static final long serialVersionUID = -8861242177516380240L;
 
+    /**
+     * 子单号
+     */
     private Integer orderNo;
 
+    /**
+     * 关联订单号
+     */
     private Integer relateOrderNo;
 
+    /**
+     * 子单类型
+     */
     private OrderEnum orderType;
 
+    /**
+     * 子单描述
+     */
     private String desc;
 
+    /**
+     * 子单总金额
+     */
     private BigDecimal totalMoney;
 
+    /**
+     * 子单支付金额
+     */
     private BigDecimal cash;
 
+    /**
+     * 子单红包金额
+     */
     private BigDecimal redEnvelopMoney;
 
+    /**
+     * 子单积分金额
+     */
     private BigDecimal pointMoney;
 
     public Integer getOrderNo() {
@@ -89,5 +115,19 @@ public class SubOrder implements Serializable {
 
     public void setPointMoney(BigDecimal pointMoney) {
         this.pointMoney = pointMoney;
+    }
+
+    @Override
+    public String toString() {
+        return "SubOrder{" +
+                "orderNo=" + orderNo +
+                ", relateOrderNo=" + relateOrderNo +
+                ", orderType=" + orderType +
+                ", desc='" + desc + '\'' +
+                ", totalMoney=" + totalMoney +
+                ", cash=" + cash +
+                ", redEnvelopMoney=" + redEnvelopMoney +
+                ", pointMoney=" + pointMoney +
+                '}';
     }
 }

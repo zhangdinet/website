@@ -9,12 +9,12 @@
     </appender>
 
     <appender name="InfoFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>D:/logs/info/info-%d{yyyy-MM-dd}-%i.log</file>
+        <file>/Users/zhangdi/log/info-%d{yyyy-MM-dd}-%i.log</file>
         <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
             <level>INFO</level>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <FileNamePattern>D:/logs/info/info-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <FileNamePattern>/Users/zhangdi/log/info/info-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
             <MaxFileSize>20MB</MaxFileSize>
             <MaxHistory>10</MaxHistory>
         </rollingPolicy>
@@ -26,14 +26,14 @@
     </appender>
 
     <appender name="ErrorFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>D:/logs/error/error-%d{yyyy-MM-dd}-%i.log</file>
+        <file>/Users/zhangdi/log/error-%d{yyyy-MM-dd}-%i.log</file>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>
             <onMatch>ACCEPT</onMatch>
             <onMismatch>DENY</onMismatch>
         </filter>
         <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <FileNamePattern>D:/logs/error/error-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
+            <FileNamePattern>/Users/zhangdi/log/error-%d{yyyy-MM-dd}-%i.log</FileNamePattern>
             <MaxFileSize>20MB</MaxFileSize>
             <MaxHistory>10</MaxHistory>
         </rollingPolicy>
