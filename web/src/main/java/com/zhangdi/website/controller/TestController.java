@@ -1,7 +1,9 @@
 package com.zhangdi.website.controller;
 
-import com.google.common.collect.Maps;
+//import com.google.common.collect .Maps;
 import com.zhangdi.website.entity.UserEntity;
+import org.springframework.context.EnvironmentAware;
+import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,12 +15,15 @@ import java.util.Map;
  */
 @Controller
 @RequestMapping("/test")
-public class TestController {
+public class TestController implements EnvironmentAware {
+
+    Environment environment;
 
     @RequestMapping("/testJson")
     @ResponseBody
     public Map<String,UserEntity> testJson(){
-        Map<String,UserEntity> map = Maps.newHashMap();
+        int a =  0;
+        /*Map<String,UserEntity> map = Maps.newHashMap();
 
         UserEntity userEntity = new UserEntity();
         userEntity.setName("zhangdi");
@@ -34,6 +39,12 @@ public class TestController {
         userEntity.setPhone("13636111312766");
         map.put(userEntity.getName(),userEntity);
 
-        return map;
+        return map;*/
+        return null;
+    }
+
+    @Override
+    public void setEnvironment(Environment environment) {
+        this.environment = environment;
     }
 }
